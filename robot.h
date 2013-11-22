@@ -21,8 +21,9 @@ void moveRobotBackward();
 
 void moveRobotLeft();
 
-
 void moveRobotRight();
+
+void stopRobot();
 
 
 #endif /* ROBOT_H_ */

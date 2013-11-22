@@ -18,8 +18,10 @@ int main(void) {
     while(1)
     {
 
-    	moveRobotLeft();
+    	moveRobotBackward();
     	_delay_cycles(10000);
+    	//stopRobot();
+    	//_delay_cycles(10000);
     }
 	
 	return 0;
