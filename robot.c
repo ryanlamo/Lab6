@@ -21,8 +21,8 @@ void initPWM()
 	P2DIR |= BIT1;
 	P2SEL |= BIT1;
 
-	TA0CTL &= MC1|MC0;
-	TA1CTL &= MC1|MC0;
+	TA0CTL &= ~(MC1|MC0);
+	TA1CTL &= ~(MC1|MC0);
 
 	TA0CTL |= TACLR;
 	TA1CTL |= TACLR;
@@ -46,33 +46,36 @@ void initPWM()
 
 void moveLeftMotorForward()
 {
-	TA0CCR1 = 50;
 	TA1CCR2 = 0;
-}
-
-void moveLeftMotorBackward()
-{
-	TA0CCR1 = 0;
-	TA1CCR2 = 50;
+	_delay_cycles(10000);
+	TA0CCR1 = 50;
 }
 
 void moveRightMotorForward()
 {
-	TA1CCR1 = 50;
 	TA1CCR2 = 0;
+	_delay_cycles(10000);
+	TA1CCR1 = 50;
 }
 
-void moveRightMotorBackward()
+void stopLeftMotor()
 {
+	TA1CCR2 = 0;
+	_delay_cycles(10000);
+	TA0CCR1 = 0;
+}
+
+void stopRightMotor()
+{
+	TA1CCR2 = 0;
+	_delay_cycles(10000);
 	TA1CCR1 = 0;
-	TA1CCR2 = 50;
 }
 
 void stopRobot()
 {
-	TA0CCR1 = 0;
-	TA1CCR2 = 0;
-	TA1CCR1 = 0;
+	stopLeftMotor();
+	stopRightMotor();
 }
 
 void moveRobotForward()
@@ -83,19 +86,19 @@ void moveRobotForward()
 
 void moveRobotBackward()
 {
-	moveLeftMotorBackward();
-	moveRightMotorBackward();
+	TA0CCR1 = 0;
+	TA1CCR1 = 0;
+	TA1CCR2 = 50;
 }
-
 
 void moveRobotLeft()
 {
+	stopLeftMotor();
 	moveRightMotorForward();
 }
 
 void moveRobotRight()
 {
+	stopRightMotor();
 	moveLeftMotorForward();
 }
-
-

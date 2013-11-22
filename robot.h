@@ -11,10 +11,8 @@
 void initPWM();
 
 void moveLeftMotorForward();
-void moveLeftMotorBackward();
 
 void moveRightMotorForward();
-void moveRightMotorBackward();
 
 void moveRobotForward();
 void moveRobotBackward();
@@ -24,6 +22,5 @@ void moveRobotLeft();
 void moveRobotRight();
 
 void stopRobot();
-
 
 #endif /* ROBOT_H_ */

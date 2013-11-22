@@ -17,11 +17,22 @@ int main(void) {
 
     while(1)
     {
-
+    	moveRobotForward();
+    	_delay_cycles(1000000);
     	stopRobot();
-    	_delay_cycles(10000);
-
-
+    	_delay_cycles(1000000);
+    	moveRobotBackward();
+    	_delay_cycles(1000000);
+    	stopRobot();
+    	_delay_cycles(1000000);
+    	moveRobotLeft();
+    	_delay_cycles(1000000);
+    	stopRobot();
+    	_delay_cycles(1000000);
+    	moveRobotRight();
+    	_delay_cycles(1000000);
+    	stopRobot();
+    	_delay_cycles(1000000);
     }
 	
 	return 0;
