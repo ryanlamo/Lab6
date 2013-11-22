@@ -26,6 +26,14 @@ int main(void) {
     	stopRobot();
     	_delay_cycles(1000000);
     	moveRobotLeft();
+    	_delay_cycles(500000);
+    	stopRobot();
+    	_delay_cycles(1000000);
+    	moveRobotRight();
+    	_delay_cycles(500000);
+    	stopRobot();
+    	_delay_cycles(1000000);
+    	moveRobotLeft();
     	_delay_cycles(1000000);
     	stopRobot();
     	_delay_cycles(1000000);
@@ -33,6 +41,7 @@ int main(void) {
     	_delay_cycles(1000000);
     	stopRobot();
     	_delay_cycles(1000000);
+
     }
 	
 	return 0;
