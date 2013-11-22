@@ -18,7 +18,7 @@ int main(void) {
     while(1)
     {
 
-    	moveRobotForward();
+    	moveRobotLeft();
     	_delay_cycles(10000);
     }
 	

@@ -81,8 +81,8 @@ void moveRobotBackward()
 
 void moveRobotLeft()
 {
-	moveLeftMotorBackward();
-//	moveRightMotorForward();
+//	moveLeftMotorBackward();
+	moveRightMotorForward();
 }
 
 
