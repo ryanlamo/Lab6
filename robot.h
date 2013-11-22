@@ -19,11 +19,10 @@ void moveRightMotorBackward();
 void moveRobotForward();
 void moveRobotBackward();
 
-void moveRobotSmallLeft();
-void moveRobotLargeLeft();
+void moveRobotLeft();
 
-void moveRobotSmallRight();
-void moveRobotLargeRight();
+
+void moveRobotRight();
 
 
 #endif /* ROBOT_H_ */

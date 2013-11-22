@@ -7,9 +7,20 @@
  */
 
 #include <msp430.h> 
+#include "robot.h"
 
 int main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+
+
+    initPWM();
+
+    while(1)
+    {
+
+    	moveRobotForward();
+    	_delay_cycles(10000);
+    }
 	
 	return 0;
 }
