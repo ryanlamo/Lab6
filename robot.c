@@ -32,7 +32,7 @@ void initPWM()
 
 	TA0CCR0 = 100;
 	TA1CCR0 = 100;
-	TA0CCR0 = 0;
+	TA0CCR1 = 0;
 	TA1CCR1 = 0;
 	TA1CCR2 = 0;
 
@@ -68,6 +68,13 @@ void moveRightMotorBackward()
 	TA1CCR2 = 50;
 }
 
+void stopRobot()
+{
+	TA0CCR1 = 0;
+	TA1CCR2 = 0;
+	TA1CCR1 = 0;
+}
+
 void moveRobotForward()
 {
 	moveLeftMotorForward();
@@ -83,20 +90,12 @@ void moveRobotBackward()
 
 void moveRobotLeft()
 {
-//	moveLeftMotorBackward();
 	moveRightMotorForward();
 }
-
 
 void moveRobotRight()
 {
 	moveLeftMotorForward();
-//	moveRightMotorBackward();
 }
 
-void stopRobot()
-{
-	TA0CCR1 = 0;
-	TA1CCR1 = 0;
-}
 
