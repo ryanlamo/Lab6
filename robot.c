@@ -9,15 +9,19 @@
 
 void initPWM()
 {
+	//Pin setup for TA1.2
 	P2DIR |= BIT4;
 	P2SEL |= BIT4;
 
+	//Pin setup for TA0.1
 	P1DIR |= BIT2;
 	P1SEL |= BIT2;
 
+	//Pin setup for TA1.2
 	P2DIR |= BIT5;
 	P2SEL |= BIT5;
 
+	//Pin setup for TA1.1
 	P2DIR |= BIT1;
 	P2SEL |= BIT1;
 
@@ -36,6 +40,7 @@ void initPWM()
 	TA1CCR1 = 0;
 	TA1CCR2 = 0;
 
+	//Set TA01., TA1.1, TA1.2 to set/reset mode
 	TA0CCTL1 |= OUTMOD_7;
 	TA1CCTL1 |= OUTMOD_7;
 	TA1CCTL2 |= OUTMOD_7;

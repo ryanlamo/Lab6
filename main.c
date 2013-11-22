@@ -3,7 +3,10 @@
  * Last Edited: 18 November 2013
  * Description: This program will move a robot forward, backwards, half left, full left,
  * half right and full right.
- * Documentation:
+ * Documentation: After having difficulty getting the backward command to work, I referenced
+ * Jason Mossing's code and noticed that he used the same signal to control reverse movement.
+ * I implemented similar code to perform this same task. Capt Branchflower also helped to clean up my code
+ * to run more efficiently.
  */
 
 #include <msp430.h> 
