@@ -11,7 +11,7 @@ Requires connecting the correct pins on the MSP 430 to the motor control pins to
 
 ## Functions 
 
-- 'initPWM()'
+- `initPWM()`
   - Initializes the MSP 430 to use PWM to power the DC motors. 
   - Pin1.2 used to access TA0.1
   - Pin2.1 used to access TA1.1
@@ -22,17 +22,17 @@ Requires connecting the correct pins on the MSP 430 to the motor control pins to
   - TA1.2 is used to control the reverse motion of the robot. 
   
 - behind the scene code used by program are below 
-  - 'moveLeftMotorForward()' 
-  - 'moveRightMotorForward()'
-  - 'stopLeftMotor()'
+  - `moveLeftMotorForward()` 
+  - `moveRightMotorForward()`
+  - `stopLeftMotor()`
   - `stopRightMotor()`
 
 - code utilized by the user are below
-  - 'stopRobot()' utilizes 'stopLeftMotor()' and 'stopRightMotor()'
-  - 'moveRobotForward()' utilizes 'moveLeftMotorForward()' and 'moveRightMotorForward()'
-  - 'moveRobotBackward()' does not utilize any other code
-  - 'moveRobotLeft()' utilizes 'stopLeftMotor()' and 'moveRightMotorForward()'
-  - 'moveRobotRight()' utilizes 'stopRightMotor()' and 'moveLeftMotorForward()'
+  - `stopRobot()` utilizes `stopLeftMotor()` and `stopRightMotor()`
+  - `moveRobotForward()` utilizes `moveLeftMotorForward()` and `moveRightMotorForward()`
+  - `moveRobotBackward()` does not utilize any other code
+  - `moveRobotLeft()` utilizes `stopLeftMotor()` and `moveRightMotorForward()`
+  - `moveRobotRight()` utilizes `stopRightMotor()` and `moveLeftMotorForward()`
   
 
   
