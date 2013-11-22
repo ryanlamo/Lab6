@@ -25,7 +25,7 @@ Requires connecting the correct pins on the MSP 430 to the motor control pins to
   - 'moveLeftMotorForward()' 
   - 'moveRightMotorForward()'
   - 'stopLeftMotor()'
-  - stopRightMotor()'
+  - `stopRightMotor()`
 
 - code utilized by the user are below
   - 'stopRobot()' utilizes 'stopLeftMotor()' and 'stopRightMotor()'
