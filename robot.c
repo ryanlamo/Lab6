@@ -53,14 +53,14 @@ void moveLeftMotorForward()
 {
 	TA1CCR2 = 0;
 	_delay_cycles(10000);
-	TA0CCR1 = 50;
+	TA0CCR1 = 20;
 }
 
 void moveRightMotorForward()
 {
 	TA1CCR2 = 0;
 	_delay_cycles(10000);
-	TA1CCR1 = 50;
+	TA1CCR1 = 40;
 }
 
 void stopLeftMotor()
